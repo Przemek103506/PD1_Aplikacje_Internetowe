@@ -10,23 +10,72 @@
 
     <header>
         <nav>
-            <!-- TODO menu -->
-            <h1>Serwis Komputerowy</h1>
+            <h1>Serwis PC</h1>
+            <ul class="nav-links">
+                <li><a href="#witam">Start</a></li>
+                <li><a href="#uslugi">Usługi</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <button id="mobile-menu-btn" aria-label="Otwórz menu">☰</button>
         </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <!-- TODO sekcja powitalna -->
-            <h2>Szybka i profesjonalna naprawa sprzętu</h2>
+        <section id="witam">
+            <div class="witam-tresc">
+                <h2>Szybka i profesjonalna naprawa sprzętu</h2>
+                <p>Twój komputer znowu działa wolno? A może nie chce się włączyć? Nie martw się, zajmiemy się każdą usterką.</p>
+                <a href="#kontakt" class="btn">Zgłoś usterkę</a>
+            </div>
         </section>
         
         <section id="uslugi">
-            <!-- TODO sekcja uslug -->
+            <h2>W czym możemy pomóc?</h2>
+            <div class="uslugi-grid">
+                <article class="usluga-karta">
+                    <h3>Naprawa laptopów</h3>
+                    <p>Wymiana matryc, baterii, klawiatur, naprawa płyt głównych i czyszczenie po zalaniu.</p>
+                </article>
+                <article class="usluga-karta">
+                    <h3>Składanie komputerów PC</h3>
+                    <p>Dobór podzespołów i profesjonalny montaż zestawów biurowych oraz gamingowych.</p>
+                </article>
+                <article class="usluga-karta">
+                    <h3>Odzyskiwanie danych</h3>
+                    <p>Przywracanie skasowanych plików i odzyskiwanie danych z uszkodzonych dysków.</p>
+                </article>
+            </div>
         </section>
         
         <section id="kontakt">
-            <!-- TODO formularz kontaktowy -->
+            <h2>Zgłoś usterkę / Kontakt</h2>
+            <p>Opisz swój problem, a my odezwiemy się z wyceną naprawy.</p>
+            
+            <form id="formularz-kontaktowy" action="#" novalidate>
+                <div class="form-grupa">
+                    <label for="imie">Imię:</label>
+                    <input type="text" id="imie" name="imie" placeholder="Wpisz swoje imię">
+                </div>
+
+                <div class="form-grupa">
+                    <label for="nazwisko">Nazwisko:</label>
+                    <input type="text" id="nazwisko" name="nazwisko" placeholder="Wpisz swoje nazwisko">
+                </div>
+                
+                <div class="form-grupa">
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="twoj@email.pl">
+                </div>
+                
+                <div class="form-grupa">
+                    <label for="wiadomosc">Opis usterki:</label>
+                    <textarea id="wiadomosc" name="wiadomosc" rows="5" placeholder="Opisz dokładnie, co się dzieje z urządzeniem..."></textarea>
+                </div>
+                
+                <div id="komunikaty-bledow"></div>
+                
+                <button type="submit" class="btn">Wyślij zgłoszenie</button>
+            </form>
         </section>
     </main>
 
