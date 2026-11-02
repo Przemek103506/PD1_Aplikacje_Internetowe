@@ -12,14 +12,14 @@
 
 /* Tryb Ciemny */
 body.dark-theme {
-    --kolor-glowny: #00ffcc;
-    --kolor-akcent: #ff00ff;
+    --kolor-glowny: #3f3f3f;
+    --kolor-akcent: #ff3366;
     --kolor-tla: #121212;
     --kolor-tla-elementu: #1e1e1e;
     --kolor-tekstu: #e0e0e0;
     --kolor-naglowkow: #ffffff;
-    --kolor-obramowania: #00ffcc;
-    --kolor-cienia: #00ffcc;
+    --kolor-obramowania: #3f3f3f;
+    --kolor-cienia: #3f3f3f;
 }
 
 * {
