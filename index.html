@@ -14,6 +14,7 @@
             <ul class="nav-links">
                 <li><a href="#witam">Start</a></li>
                 <li><a href="#uslugi">Usługi</a></li>
+                <li><a href="#realizacje">Realizacje</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
 
@@ -50,7 +51,54 @@
                 </article>
             </div>
         </section>
-        
+
+        <section id="realizacje">
+            <h2>Ostatnie realizacje</h2>
+            <div class="uslugi-grid">
+                
+                <article class="usluga-karta realizacja-klik" 
+                    data-tytul="Modernizacja stacji roboczej PC" 
+                    data-opis="Wymiana procesora na nowszą generację (i7-13700K), montaż chłodzenia powietrznego oraz dołożenie 32GB RAM DDR5 dla lokalnego studia graficznego." 
+                    data-czas="1 dzień"
+                    data-zdjecie="img/modernizacja.jpg">
+                    <h3>Modernizacja PC</h3>
+                    <p class="kliknij-info">Kliknij, aby zobaczyć szczegóły</p>
+                </article>
+
+                <article class="usluga-karta realizacja-klik" 
+                    data-tytul="Zalany MacBook Pro 14" 
+                    data-opis="Kompleksowe czyszczenie w myjce ultradźwiękowej, naprawa ścieżek zasilania na płycie głównej (mikrolutowanie) oraz wymiana uszkodzonej klawiatury po zalaniu wodą." 
+                    data-czas="4 dni"
+                    data-zdjecie="img/zalanymacbook.jpg">
+                    <h3>Zalany MacBook</h3>
+                    <p class="kliknij-info">Kliknij, aby zobaczyć szczegóły</p>
+                </article>
+
+                <article class="usluga-karta realizacja-klik" 
+                    data-tytul="Odzysk Danych z macierzy RAID" 
+                    data-opis="Bezpieczne odzyskanie ponad 2TB danych księgowych z uszkodzonej macierzy RAID 1 w serwerze biurowym (awaria dwóch dysków HDD jednocześnie)." 
+                    data-czas="7 dni"
+                    data-zdjecie="img/odzyskiwanie.jpg">
+                    <h3>Odzyskiwanie danych</h3>
+                    <p class="kliknij-info">Kliknij, aby zobaczyć szczegóły</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Wyskakujące okienko -->
+        <div id="modal-realizacja" class="modal-ukryty">
+            <div class="modal-zawartosc">
+                <span id="modal-zamknij" class="modal-zamknij-btn">&times;</span>
+                <h3 id="modal-tytul">Tytuł Zastępczy</h3>
+                
+                <img id="modal-img" src="" alt="Zdjęcie realizacji" style="width: 100%; max-height: 300px; object-fit: cover; border: 3px solid var(--kolor-obramowania); margin-bottom: 1rem; display: none;">
+                
+                <p id="modal-opis">Tu pojawi się opis wybranej realizacji...</p>
+                <p><strong>Czas realizacji:</strong> <span id="modal-czas">?</span></p>
+            </div>
+        </div>
+
         <section id="kontakt">
             <h2>Zgłoś usterkę / Kontakt</h2>
             <p>Opisz swój problem, a my odezwiemy się z wyceną naprawy.</p><br>

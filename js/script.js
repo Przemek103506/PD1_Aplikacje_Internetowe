@@ -94,4 +94,57 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 5000);
         }
     });
+
+
+
+    // OBSŁUGA MODALA REALIZACJI
+
+    const kartyRealizacji = document.querySelectorAll(".realizacja-klik");
+    const modal = document.getElementById("modal-realizacja");
+    const modalTytul = document.getElementById("modal-tytul");
+    const modalOpis = document.getElementById("modal-opis");
+    const modalCzas = document.getElementById("modal-czas");
+    const modalImg = document.getElementById("modal-img"); // <--- DODANE (Pobieramy tag img)
+    const btnZamknij = document.getElementById("modal-zamknij");
+
+    // Kliknięcie w konkretną kartę
+    kartyRealizacji.forEach(karta => {
+        karta.addEventListener("click", () => {
+            // Pobieramy dane zapisane w atrybutach HTML
+            const tytul = karta.getAttribute("data-tytul");
+            const opis = karta.getAttribute("data-opis");
+            const czas = karta.getAttribute("data-czas");
+            const sciezkaZdjecia = karta.getAttribute("data-zdjecie"); // <--- DODANE (Odczytujemy ścieżkę)
+
+            // Wrzucamy dane tekstowe do wnętrza Modala
+            modalTytul.textContent = tytul;
+            modalOpis.textContent = opis;
+            modalCzas.textContent = czas;
+            
+            // Wrzucamy zdjęcie (jeśli ścieżka istnieje, pokazujemy obrazek)
+            if(sciezkaZdjecia) {
+                modalImg.src = sciezkaZdjecia;
+                modalImg.style.display = "block"; // Odkrywamy obrazek
+            } else {
+                modalImg.style.display = "none"; // Chowamy obrazek, jeśli karta go nie ma
+            }
+
+            // Pokazujemy Modal (zmieniając klasę w CSS)
+            modal.classList.add("aktywny");
+        });
+    });
+
+    // Zamknięcie Modala po kliknięciu w "X"
+    btnZamknij.addEventListener("click", () => {
+        modal.classList.remove("aktywny");
+    });
+
+    // Zamknięcie Modala po kliknięciu w ciemne tło (poza białym okienkiem)
+    modal.addEventListener("click", (wydarzenie) => {
+        if (wydarzenie.target === modal) {
+            modal.classList.remove("aktywny");
+        }
+    });
+
+
 });

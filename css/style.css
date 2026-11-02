@@ -307,3 +307,76 @@ footer {
         box-shadow: 4px 4px 0 var(--kolor-cienia);
     }
 }
+
+
+
+/*
+   DODATEK: MODAL REALIZACJI
+*/
+
+.realizacja-klik {
+    cursor: pointer;
+}
+
+.kliknij-info {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--kolor-akcent);
+    text-transform: uppercase;
+}
+
+#modal-realizacja {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-realizacja.aktywny {
+    display: flex;
+}
+
+.modal-zawartosc {
+    background-color: var(--kolor-tla-elementu);
+    padding: 3rem 2rem;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    border: 3px solid var(--kolor-obramowania);
+    box-shadow: 12px 12px 0 var(--kolor-cienia);
+    text-align: left;
+}
+
+.modal-zawartosc h3 {
+    border-bottom: 3px solid var(--kolor-akcent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-zawartosc p {
+    margin-bottom: 1rem;
+}
+
+.modal-zamknij-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--kolor-tekstu);
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.modal-zamknij-btn:hover {
+    color: var(--kolor-akcent);
+    transform: scale(1.2);
+}
