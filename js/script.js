@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalTytul = document.getElementById("modal-tytul");
     const modalOpis = document.getElementById("modal-opis");
     const modalCzas = document.getElementById("modal-czas");
-    const modalImg = document.getElementById("modal-img"); // <--- DODANE (Pobieramy tag img)
+    const modalImg = document.getElementById("modal-img");
     const btnZamknij = document.getElementById("modal-zamknij");
 
     // Kliknięcie w konkretną kartę
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const tytul = karta.getAttribute("data-tytul");
             const opis = karta.getAttribute("data-opis");
             const czas = karta.getAttribute("data-czas");
-            const sciezkaZdjecia = karta.getAttribute("data-zdjecie"); // <--- DODANE (Odczytujemy ścieżkę)
+            const sciezkaZdjecia = karta.getAttribute("data-zdjecie");
 
             // Wrzucamy dane tekstowe do wnętrza Modala
             modalTytul.textContent = tytul;

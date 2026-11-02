@@ -101,33 +101,49 @@
 
         <section id="kontakt">
             <h2>Zgłoś usterkę / Kontakt</h2>
-            <p>Opisz swój problem, a my odezwiemy się z wyceną naprawy.</p><br>
+            <p style="text-align: center; margin-bottom: 2rem;">Opisz swój problem, a my odezwiemy się z wyceną naprawy, lub odwiedź nas osobiście.</p>
             
-            <form id="formularz-kontaktowy" action="#" novalidate>
-                <div class="form-grupa">
-                    <label for="imie">Imię:</label>
-                    <input type="text" id="imie" name="imie" placeholder="Wpisz swoje imię">
+            <div class="kontakt-pojemnik">
+                
+                <div class="dane-adresowe">
+                    <h3>Gdzie nas znaleźć?</h3>
+                    <p><strong>📍 Adres:</strong></p>
+                    <p>ul. Serwisowa 1<br>21-100 Lubartów</p>
+                    
+                    <p class="odstep-gora"><strong>📞 Telefon:</strong></p>
+                    <p><a href="https://www.youtube.com/watch?v=Aq5WXmQQooo">+48 123 456 789</a></p>
+                    
+                    <p class="odstep-gora"><strong>🕒 Godziny otwarcia:</strong></p>
+                    <p>Pn - Pt: 08:00 - 16:00<br>Sobota: 08:00 - 12:00<br>Niedziela: Zamknięte</p>
+            
                 </div>
 
-                <div class="form-grupa">
-                    <label for="nazwisko">Nazwisko:</label>
-                    <input type="text" id="nazwisko" name="nazwisko" placeholder="Wpisz swoje nazwisko">
-                </div>
-                
-                <div class="form-grupa">
-                    <label for="email">Adres e-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="twoj@email.pl">
-                </div>
-                
-                <div class="form-grupa">
-                    <label for="wiadomosc">Opis usterki:</label>
-                    <textarea id="wiadomosc" name="wiadomosc" rows="5" placeholder="Opisz dokładnie, co się dzieje z urządzeniem..."></textarea>
-                </div>
-                
-                <div id="komunikaty-bledow"></div>
-                
-                <button type="submit" class="btn">Wyślij zgłoszenie</button>
-            </form>
+                <form id="formularz-kontaktowy" action="#" novalidate>
+                    <div class="form-grupa">
+                        <label for="imie">Imię:</label>
+                        <input type="text" id="imie" name="imie" placeholder="Wpisz swoje imię">
+                    </div>
+
+                    <div class="form-grupa">
+                        <label for="nazwisko">Nazwisko:</label>
+                        <input type="text" id="nazwisko" name="nazwisko" placeholder="Wpisz swoje nazwisko">
+                    </div>
+                    
+                    <div class="form-grupa">
+                        <label for="email">Adres e-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="twoj@email.pl">
+                    </div>
+                    
+                    <div class="form-grupa">
+                        <label for="wiadomosc">Opis usterki:</label>
+                        <textarea id="wiadomosc" name="wiadomosc" rows="5" placeholder="Opisz dokładnie, co się dzieje z urządzeniem..."></textarea>
+                    </div>
+                    
+                    <div id="komunikaty-bledow"></div>
+                    
+                    <button type="submit" class="btn">Wyślij zgłoszenie</button>
+                </form>
+            </div>
         </section>
     </main>
 

@@ -1,3 +1,4 @@
+
 :root {
     --kolor-glowny: #000000;
     --kolor-akcent: #ff3366;
@@ -10,7 +11,7 @@
     --czcionka-glowna: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Tryb Ciemny */
+/* TRYB CIEMNY */
 body.dark-theme {
     --kolor-glowny: #3f3f3f;
     --kolor-akcent: #ff3366;
@@ -49,6 +50,7 @@ h1, h2, h3 {
     transition: color 0.3s ease;
 }
 
+/* NAWIGACJA */
 header {
     background-color: var(--kolor-tla-elementu);
     color: var(--kolor-tekstu);
@@ -129,6 +131,7 @@ nav h1 {
     cursor: pointer;
 }
 
+/* GŁÓWNE SEKCJE */
 section {
     padding: 5rem 2rem;
     max-width: 1200px;
@@ -144,6 +147,7 @@ section h2 {
     padding-bottom: 5px;
 }
 
+/* SEKCJA POWITALNA */
 #witam {
     text-align: center;
     padding: 6rem 2rem;
@@ -162,6 +166,7 @@ section h2 {
     font-weight: 500;
 }
 
+/* PRZYCISKI */
 .btn {
     display: inline-block;
     background-color: var(--kolor-akcent);
@@ -183,6 +188,7 @@ section h2 {
     background-color: var(--kolor-akcent);
 }
 
+/* USŁUGI I REALIZACJE (GRID) */
 .uslugi-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -203,9 +209,47 @@ section h2 {
     box-shadow: 9px 9px 0 var(--kolor-akcent);
 }
 
-#kontakt form {
-    max-width: 600px;
+/* KONTAKT */
+.kontakt-pojemnik {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    max-width: 1000px;
     margin: 0 auto;
+    align-items: start;
+}
+
+.dane-adresowe {
+    background: var(--kolor-tla-elementu);
+    padding: 2.5rem 2rem;
+    border: 3px solid var(--kolor-obramowania);
+    box-shadow: 6px 6px 0 var(--kolor-cienia);
+    transition: background-color 0.3s ease;
+    text-align: left;
+}
+
+.dane-adresowe h3 {
+    border-bottom: 3px solid var(--kolor-akcent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dane-adresowe a {
+    color: var(--kolor-akcent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.dane-adresowe a:hover {
+    text-decoration: underline;
+}
+
+.odstep-gora {
+    margin-top: 1.5rem;
+}
+
+#kontakt form {
     background: var(--kolor-tla-elementu);
     padding: 3rem 2rem;
     border: 3px solid var(--kolor-obramowania);
@@ -258,62 +302,7 @@ body.dark-theme .form-grupa textarea:focus {
     text-transform: uppercase;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--kolor-tla-elementu);
-    color: var(--kolor-tekstu);
-    border-top: 3px solid var(--kolor-obramowania);
-    margin-top: 4rem;
-    font-weight: bold;
-}
-
-/* Responsywność */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--kolor-tla-elementu);
-        border-bottom: 3px solid var(--kolor-obramowania);
-        padding: 1rem 0;
-        text-align: center;
-    }
-    
-    .nav-links.aktywne {
-        display: flex;
-    }
-
-    #mobile-menu-btn {
-        display: block;
-    }
-
-    .uslugi-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    section {
-        padding: 3rem 1rem;
-    }
-    
-    #witam {
-        box-shadow: 4px 4px 0 var(--kolor-cienia);
-    }
-    
-    #kontakt form {
-        box-shadow: 4px 4px 0 var(--kolor-cienia);
-    }
-}
-
-
-
-/*
-   DODATEK: MODAL REALIZACJI
-*/
-
+/* MODAL REALIZACJI */
 .realizacja-klik {
     cursor: pointer;
 }
@@ -379,4 +368,55 @@ footer {
 .modal-zamknij-btn:hover {
     color: var(--kolor-akcent);
     transform: scale(1.2);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--kolor-tla-elementu);
+    color: var(--kolor-tekstu);
+    border-top: 3px solid var(--kolor-obramowania);
+    margin-top: 4rem;
+    font-weight: bold;
+}
+
+/* RESPONSYWNOŚĆ (URZĄDZENIA MOBILNE) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--kolor-tla-elementu);
+        border-bottom: 3px solid var(--kolor-obramowania);
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    .nav-links.aktywne {
+        display: flex;
+    }
+
+    #mobile-menu-btn {
+        display: block;
+    }
+
+    .uslugi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    .kontakt-pojemnik {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    #witam, #kontakt form, .dane-adresowe {
+        box-shadow: 4px 4px 0 var(--kolor-cienia);
+    }
 }
