@@ -1,0 +1,1 @@
+console.log("Strona serwisu komputerowego została załadowana poprawnie.");
