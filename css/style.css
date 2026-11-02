@@ -1,3 +1,26 @@
+:root {
+    --kolor-glowny: #000000;
+    --kolor-akcent: #ff3366;
+    --kolor-tla: #f4f4f0;
+    --kolor-tla-elementu: #ffffff; 
+    --kolor-tekstu: #111111;
+    --kolor-naglowkow: #000000;
+    --kolor-obramowania: #000000; 
+    --kolor-cienia: #000000;
+    --czcionka-glowna: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tryb Ciemny */
+body.dark-theme {
+    --kolor-glowny: #00ffcc;
+    --kolor-akcent: #ff00ff;
+    --kolor-tla: #121212;
+    --kolor-tla-elementu: #1e1e1e;
+    --kolor-tekstu: #e0e0e0;
+    --kolor-naglowkow: #ffffff;
+    --kolor-obramowania: #00ffcc;
+    --kolor-cienia: #00ffcc;
+}
 
 * {
     margin: 0;
@@ -5,7 +28,282 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--czcionka-glowna);
+    color: var(--kolor-tekstu);
+    background-color: var(--kolor-tla);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+h1, h2, h3 {
+    color: var(--kolor-naglowkow);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+    transition: color 0.3s ease;
+}
+
+header {
+    background-color: var(--kolor-tla-elementu);
+    color: var(--kolor-tekstu);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--kolor-obramowania);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    margin-bottom: 0;
+    color: var(--kolor-naglowkow);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.nav-links a {
+    color: var(--kolor-tekstu);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--kolor-akcent);
+    color: white;
+}
+
+#theme-btn {
+    background: var(--kolor-tla);
+    border: 2px solid var(--kolor-obramowania);
+    color: var(--kolor-tekstu);
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 0 var(--kolor-cienia);
+    transition: all 0.1s ease;
+}
+
+#theme-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 var(--kolor-cienia);
+}
+
+#mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--kolor-tekstu);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    display: inline-block;
+    border-bottom: 4px solid var(--kolor-akcent);
+    padding-bottom: 5px;
+}
+
+#witam {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: var(--kolor-tla-elementu);
+    margin-top: 2rem;
+    border: 3px solid var(--kolor-obramowania);
+    box-shadow: 8px 8px 0 var(--kolor-cienia);
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+#witam p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--kolor-akcent);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid var(--kolor-obramowania);
+    box-shadow: 5px 5px 0 var(--kolor-cienia);
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.btn:hover, .btn:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 var(--kolor-cienia);
+    background-color: var(--kolor-akcent);
+}
+
+.uslugi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.usluga-karta {
+    background-color: var(--kolor-tla-elementu);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border: 3px solid var(--kolor-obramowania);
+    box-shadow: 6px 6px 0 var(--kolor-cienia);
+    transition: all 0.2s ease;
+}
+
+.usluga-karta:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 var(--kolor-akcent);
+}
+
+#kontakt form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--kolor-tla-elementu);
+    padding: 3rem 2rem;
+    border: 3px solid var(--kolor-obramowania);
+    box-shadow: 8px 8px 0 var(--kolor-cienia);
+    transition: background-color 0.3s ease;
+}
+
+.form-grupa {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-grupa label {
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.form-grupa input, 
+.form-grupa textarea {
+    padding: 12px;
+    border: 3px solid var(--kolor-obramowania);
+    font-family: var(--czcionka-glowna);
+    background-color: var(--kolor-tla);
+    color: var(--kolor-tekstu);
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.form-grupa input:focus, 
+.form-grupa textarea:focus {
+    outline: none;
+    box-shadow: inset 4px 4px 0 rgba(0,0,0,0.1);
+    border-color: var(--kolor-akcent);
+}
+
+body.dark-theme .form-grupa input:focus, 
+body.dark-theme .form-grupa textarea:focus {
+    box-shadow: inset 4px 4px 0 rgba(255,255,255,0.1);
+}
+
+#komunikaty-bledow {
+    color: var(--kolor-akcent);
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--kolor-tla-elementu);
+    color: var(--kolor-tekstu);
+    border-top: 3px solid var(--kolor-obramowania);
+    margin-top: 4rem;
+    font-weight: bold;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--kolor-tla-elementu);
+        border-bottom: 3px solid var(--kolor-obramowania);
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    .nav-links.aktywne {
+        display: flex;
+    }
+
+    #mobile-menu-btn {
+        display: block;
+    }
+
+    .uslugi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    #witam {
+        box-shadow: 4px 4px 0 var(--kolor-cienia);
+    }
+    
+    #kontakt form {
+        box-shadow: 4px 4px 0 var(--kolor-cienia);
+    }
 }
